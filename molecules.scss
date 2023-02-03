@@ -1,0 +1,18 @@
+@use 'variables' as *;
+@use 'atoms';
+
+[role="banner"] {
+    > h1 {
+      @include atoms.uppercase($letter-color);
+    }
+}
+.summary {
+    @include atoms.set-font(1.2rem);
+    padding: 15% 0;
+    p:last-child {
+      @include atoms.divider;
+    }
+    a {
+      color: $text-light; //in this case the link wants to be light instead of the default dark
+    }
+  }
