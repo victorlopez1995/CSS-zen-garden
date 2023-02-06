@@ -18,6 +18,19 @@
   margin-top: 1em;
   padding-top: 1.5em;
 }
+@mixin breakpoint($break) {
+  @if $break == large {
+  @media (min-width: $break-small) { @content; }
+  } @else {
+  @media ($break) { @content; }
+  }
+} 
+@mixin apile($column1, $column2 ,$break: large){
+  @include breakpoint($break){
+    grid-column: $column1 / $column2;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -32,7 +45,7 @@ h1 {
   padding: 0.5em 1em;
 }
 h2 {
-  font-size: 6em;
+  font-size: 3em;
   letter-spacing: 1px;
   line-height: 1em;
 }
@@ -56,9 +69,16 @@ p {
 
 a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  color: $yellow-color;
+  color: $blue-color;
   text-decoration: none;
 }
 a:hover {
-  border-color: $blue-color;
+  color: $letter-color;
+  border-color: $letter-color;
+}
+li{
+  list-style: none;
+}
+ul{
+  padding: 0;
 }

@@ -6,15 +6,35 @@
     > h1 {
       @include atoms.uppercase($letter-color);
     }
+    @include atoms.apile(1, span 2);
 }
+
+[role="article"]:not(.summary){
+  background-color: $champagne-color;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
 .summary {
   text-align: center;
     @include atoms.set-font(1.2rem);
-    padding: 15% 0;
-    // p:last-child {
-    //   @include atoms.divider;
-    // }
-    a {
-      color: $text-light; //in this case the link wants to be light instead of the default dark
-    }
+    padding: 10% 0;
+    @include atoms.apile(2, span 1);
   }
+.preamble{
+    @include atoms.apile(2, span 1);
+  }
+
+.wrapper{
+  text-align: center;
+}
+
+footer{
+    grid-row: 8;
+}
+
+.sidebar{
+  @include atoms.breakpoint(large){
+    grid-row: 3 /span 3 ;
+  }
+}

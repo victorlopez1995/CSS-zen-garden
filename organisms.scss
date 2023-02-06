@@ -1,0 +1,24 @@
+@use 'variables' as *;
+@use 'atoms';
+
+body{
+    max-width: 1020px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2vh auto;
+    @include atoms.breakpoint(large){
+        grid-template-columns: 1fr 2fr;  
+    }
+}
+.main{
+    display: contents;
+    *{
+        @include atoms.apile(2, span 1);
+    }
+}
+.page-wrapper{
+    display: contents;
+}
+.intro{
+    display: contents;
+}
