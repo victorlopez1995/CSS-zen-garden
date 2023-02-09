@@ -90,7 +90,7 @@ ul {
 }
 @media (min-width: 500px) {
   .summary {
-    grid-column: 2/span 1;
+    grid-column: 1/span 2;
   }
 }
 
@@ -105,7 +105,12 @@ ul {
 }
 
 footer {
-  grid-row: 8;
+  grid-row: 9;
+}
+@media (min-width: 500px) {
+  footer {
+    grid-row: 8;
+  }
 }
 
 @media (min-width: 500px) {

@@ -19,7 +19,7 @@
   text-align: center;
     @include atoms.set-font(1.2rem);
     padding: 10% 0;
-    @include atoms.apile(2, span 1);
+    @include atoms.apile(1, span 2);
   }
 .preamble{
     @include atoms.apile(2, span 1);
@@ -30,7 +30,11 @@
 }
 
 footer{
+  grid-row: 9;
+  @include atoms.breakpoint(large){
     grid-row: 8;
+  }
+    
 }
 
 .sidebar{
