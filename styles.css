@@ -121,41 +121,62 @@ footer {
 
 @keyframes animated-gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
+  }
+  10% {
+    background-position: 10% 90%;
+  }
+  20% {
+    background-position: 90% 90%;
+  }
+  30% {
+    background-position: 90% 50%;
+  }
+  40% {
+    background-position: 50% 90%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 50%;
   }
-  100% {
+  60% {
+    background-position: 10% 90%;
+  }
+  70% {
     background-position: 0% 50%;
   }
+  80% {
+    background-position: 90% 70%;
+  }
+  90% {
+    background-position: 90% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
-body::-webkit-scrollbar {
+.page-wrapper::-webkit-scrollbar {
   display: none;
 }
 
 html {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background: radial-gradient(circle at center, transparent 10%, #F3F3F3 10%), url("/images/background.jpg") no-repeat center center fixed;
-  background-size: 200% 200%;
-  animation: animated-gradient 15s ease-in-out infinite;
+  background: no-repeat url("/images/background.jpg") center center;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   height: 100vh;
-  max-width: 1020px;
-  overflow-y: scroll;
-  display: grid;
-  background-color: rgba(255, 255, 255, 0.3);
-  grid-template-columns: 1fr;
-  margin: 2vh auto;
-}
-@media (min-width: 500px) {
-  body {
-    grid-template-columns: 1fr 2fr;
-  }
+  width: 100vw;
+  background: no-repeat url("/images/background.jpg");
+  background: radial-gradient(circle at center, transparent 10%, rgba(0, 0, 0, 0.85) 10%);
+  background-size: 200% 200%;
+  animation: animated-gradient 20s ease-in-out infinite;
 }
 
 .main {
@@ -168,7 +189,18 @@ body {
 }
 
 .page-wrapper {
-  display: contents;
+  height: 100vh;
+  max-width: 1020px;
+  overflow-y: scroll;
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.3);
+  grid-template-columns: 1fr;
+  margin: 2vh auto;
+}
+@media (min-width: 500px) {
+  .page-wrapper {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .intro {

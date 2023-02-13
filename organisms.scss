@@ -2,15 +2,17 @@
 @use 'atoms';
 
 @keyframes animated-gradient {
-    0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+    0% {background-position: 0% 0%;}
+    10% {background-position: 10% 90%;}
+    20% {background-position: 90% 90%;}
+    30% {background-position: 90% 50%;}
+    40% {background-position: 50% 90%;}
+    50% {background-position: 50% 50%;}
+    60% {background-position: 10% 90%;}
+    70% {background-position: 0% 50%;}
+    80% {background-position: 90% 70%;}
+    90% {background-position: 90% 0%;}
+    100%{background-position: 0% 0%;}
     // 0%{background: radial-gradient(circle farthest-side at 10% 10%, transparent 15%, rgba(0,0,0, .9) 20%),no-repeat url("/images/background.jpg");}
     // 10%{background: radial-gradient(circle farthest-side at 90% 10%, transparent 15%, rgba(0,0,0, .9) 20%),no-repeat url("/images/background.jpg");}
     // 20%{background: radial-gradient(circle farthest-side at 10% 50%, transparent 15%, rgba(0,0,0, .9) 20%),no-repeat url("/images/background.jpg");}
@@ -25,26 +27,42 @@
 
 }
 
-body::-webkit-scrollbar {
+.page-wrapper::-webkit-scrollbar {
     display: none;
   }
 
 html{
     // background: radial-gradient(circle at center, transparent 15%, rgba(0,0,0, .9) 20%),no-repeat url("/images/background.jpg");
+    // background-size: 200% 200%;
+    // animation-name: moveLight;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    // background-size: 200% 200%;
-    // animation-name: moveLight;
-    background: radial-gradient(circle at center, transparent 10%, #F3F3F3 10%), 
-    url("/images/background.jpg") no-repeat center center fixed;
-    background-size: 200% 200%;
-    animation: animated-gradient 15s ease-in-out infinite;
+    background: no-repeat url("/images/background.jpg") center center;
   
 }
 
 body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background: no-repeat url("/images/background.jpg");
 
+    background: radial-gradient(circle at center, transparent 10%, rgba(0,0,0, 0.85) 10%);
+    background-size: 200% 200%;
+    animation: animated-gradient 20s ease-in-out infinite;
+}
+.main{
+    display: contents;
+    *{
+        @include atoms.apile(2, span 1);
+    }
+}
+.page-wrapper{
     height: 100vh;
     max-width: 1020px;
     overflow-y: scroll;
@@ -55,15 +73,6 @@ body{
     @include atoms.breakpoint(large){
         grid-template-columns: 1fr 2fr;  
     }
-}
-.main{
-    display: contents;
-    *{
-        @include atoms.apile(2, span 1);
-    }
-}
-.page-wrapper{
-    display: contents;
 }
 .intro{
     display: contents;
