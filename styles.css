@@ -119,9 +119,36 @@ footer {
   }
 }
 
+@keyframes animated-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at center, transparent 10%, #F3F3F3 10%), url("/images/background.jpg") no-repeat center center fixed;
+  background-size: 200% 200%;
+  animation: animated-gradient 15s ease-in-out infinite;
+}
+
 body {
+  height: 100vh;
   max-width: 1020px;
+  overflow-y: scroll;
   display: grid;
+  background-color: rgba(255, 255, 255, 0.3);
   grid-template-columns: 1fr;
   margin: 2vh auto;
 }
