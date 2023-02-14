@@ -24,6 +24,12 @@ h3 {
   letter-spacing: 1px;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
+  background-color: #F7CE5B;
+  color: white;
+  font-style: italic;
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
+  text-align: center;
 }
 
 h4 {
@@ -45,19 +51,22 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: #003566;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
   color: black;
   border-color: black;
-}
-
-li {
   list-style: none;
 }
 
 ul {
   padding: 0;
+}
+
+abbr {
+  color: #003566;
+  font-weight: bold;
 }
 
 [role=banner] {

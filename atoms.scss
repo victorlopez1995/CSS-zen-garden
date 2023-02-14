@@ -31,6 +31,19 @@
   }
 }
 
+@mixin  paraHeadlines($color:$text-light,$background:$yellow-color){
+  background-color:$background ;
+  color:$color ;
+  font-style: italic;
+  border-top:  1px dashed $color ;
+  border-bottom: 1px dashed $color;
+}
+
+@mixin abbrStyle($color:$blue-color){
+  color: $color;
+  font-weight:bold ;
+}
+
 h1,
 h2,
 h3,
@@ -48,11 +61,15 @@ h2 {
   font-size: 3em;
   letter-spacing: 1px;
   line-height: 1em;
+
 }
 h3 {
   letter-spacing: 1px;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
+  @include paraHeadlines( );
+  text-align: center;
+
 }
 h4 {
   font-size: 1.5em;
@@ -71,14 +88,17 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: $blue-color;
   text-decoration: none;
+  font-weight: bold;
 }
 a:hover {
-  color: $letter-color;
+  color:$letter-color;
   border-color: $letter-color;
-}
-li{
   list-style: none;
 }
 ul{
-  padding: 0;
+  padding:0;
+}
+
+abbr{
+  @include abbrStyle();
 }
