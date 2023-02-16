@@ -39,6 +39,8 @@ body{
     background: radial-gradient(circle at center, transparent 10%, rgba(0,0,0, 0.85) 10%);
     background-size: 200% 200%;
     animation: animated-gradient 20s ease-in-out infinite;
+
+    display: grid;
 }
 .main{
     display: contents;
@@ -47,6 +49,8 @@ body{
     }
 }
 .page-wrapper{
+    grid-row: 1/2;
+    grid-column: 1/2;
     height: 100vh;
     max-width: 1020px;
     overflow-y: scroll;
@@ -60,5 +64,61 @@ body{
 }
 .intro{
     display: contents;
+    
 }
 
+
+
+// Footer
+
+footer a {
+    color: transparent;
+}
+footer a:hover {
+    color: transparent;
+}
+.zen-validate-html {
+    background-image: url("images/html_icon.png");
+    background-color: transparent;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: .3em;
+}
+.zen-validate-css {
+    background-image: url("images/css_icon.png");
+    background-color: transparent;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: .3em;
+}
+.zen-license {
+    background-image: url("images/cc_icon.png");
+    background-color: transparent;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: .3em;
+}
+.zen-accessibility {
+    background-image: url("images/accessibility_icon.png");
+    background-color: transparent;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: .3em;
+}
+.zen-github {
+    background-image: url("images/github_icon.png");
+    background-color: transparent;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: .3em;
+}

@@ -31,6 +31,7 @@
 
 footer{
   grid-row: 9;
+  display: flex;
   @include atoms.breakpoint(large){
     grid-row: 8;
   }
@@ -41,4 +42,17 @@ footer{
   @include atoms.breakpoint(large){
     grid-row: 3 /span 3 ;
   }
+}
+
+.extra1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  width: 250px;
+  height: 250px;
+  background-image: url("images/fbi-g82a9b62e8_1920.png");
+  opacity: .1;
+  background-size: 250px;
+  background-repeat: no-repeat;
 }
