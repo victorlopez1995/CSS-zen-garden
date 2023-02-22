@@ -44,6 +44,16 @@
   font-weight:bold ;
 }
 
+@mixin logos($img-url){
+  background-image: url($img-url);
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: .3em;
+}
+
 h1,
 h2,
 h3,

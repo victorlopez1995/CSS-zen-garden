@@ -73,52 +73,24 @@ body{
 
 footer a {
     color: transparent;
+    &:hover {
+        color: transparent;
+    }
 }
-footer a:hover {
-    color: transparent;
-}
+    
 .zen-validate-html {
-    background-image: url("images/html_icon.png");
-    background-color: transparent;
-    height: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: .3em;
+    @include atoms.logos("images/html_icon.png");
 }
 .zen-validate-css {
-    background-image: url("images/css_icon.png");
-    background-color: transparent;
-    height: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: .3em;
+    @include atoms.logos("images/css_icon.png");
 }
 .zen-license {
-    background-image: url("images/cc_icon.png");
-    background-color: transparent;
-    height: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: .3em;
+    @include atoms.logos("images/cc_icon.png");
 }
 .zen-accessibility {
-    background-image: url("images/accessibility_icon.png");
-    background-color: transparent;
-    height: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: .3em;
+    @include atoms.logos("images/accessibility_icon.png");
 }
 .zen-github {
-    background-image: url("images/github_icon.png");
-    background-color: transparent;
-    height: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: .3em;
+    @include atoms.logos("images/github_icon.png");
+
 }
