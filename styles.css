@@ -65,7 +65,7 @@ ul {
   list-style: none;
 }
 
-abbr {
+abbr, .requirements a, .participation a {
   color: #003566;
   font-weight: bold;
 }

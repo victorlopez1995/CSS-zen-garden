@@ -109,7 +109,7 @@ ul{
   padding:0;
   list-style: none;
 }
-abbr {
+abbr, .requirements a, .participation a {
   @include abbrStyle($blue-color);
 }
 .sidebar abbr{
