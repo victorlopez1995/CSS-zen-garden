@@ -57,7 +57,9 @@ body{
     display: grid;
     background-color: rgba($color: #ffffff, $alpha: 0.3);
     grid-template-columns: 1fr;
-    margin: 2vh auto;
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
     @include atoms.breakpoint(large){
         grid-template-columns: 1fr 2fr;  
     }

@@ -62,6 +62,7 @@ a:hover {
 
 ul {
   padding: 0;
+  list-style: none;
 }
 
 abbr {
@@ -128,6 +129,18 @@ footer {
   .sidebar {
     grid-row: 3/span 3;
   }
+}
+
+.wrapper::after {
+  content: "";
+  display: block;
+  background-image: url("images/pexels-suzy-hazelwood-4345114.jpg"), url("images/pexels-brett-jordan-4807505.jpg");
+  width: auto;
+  height: 800px;
+  background-size: 300px 180px, 300px 400px;
+  background-repeat: no-repeat;
+  background-position: center top, center;
+  opacity: 0.5;
 }
 
 .extra1 {
@@ -222,7 +235,9 @@ body {
   display: grid;
   background-color: rgba(255, 255, 255, 0.3);
   grid-template-columns: 1fr;
-  margin: 2vh auto;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
 }
 @media (min-width: 500px) {
   .page-wrapper {
