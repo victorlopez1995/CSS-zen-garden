@@ -90,7 +90,7 @@ abbr, .requirements a, .participation a {
 }
 @media (min-width: 500px) {
   [role=banner] {
-    grid-column: 1/span 2;
+    grid-column: 2/span 1;
   }
 }
 
@@ -98,6 +98,7 @@ abbr, .requirements a, .participation a {
   background-color: #DFD6A7;
   padding: 1rem;
   margin-bottom: 1rem;
+  z-index: 10;
 }
 
 .summary {
@@ -136,20 +137,8 @@ footer {
 
 @media (min-width: 500px) {
   .sidebar {
-    grid-row: 3/span 3;
+    grid-row: 3/span 2;
   }
-}
-
-.wrapper::after {
-  content: "";
-  display: block;
-  background-image: url("images/pexels-suzy-hazelwood-4345114.jpg"), url("images/pexels-brett-jordan-4807505.jpg");
-  width: auto;
-  height: 800px;
-  background-size: 300px 180px, 300px 400px;
-  background-repeat: no-repeat;
-  background-position: center top, center;
-  opacity: 0.5;
 }
 
 .extra1 {
@@ -157,12 +146,66 @@ footer {
   grid-column: 1/2;
   justify-self: center;
   align-self: center;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background-image: url("images/fbi-g82a9b62e8_1920.png");
   opacity: 0.1;
-  background-size: 250px;
+  background-size: 200px;
   background-repeat: no-repeat;
+}
+
+.extra2 {
+  grid-row: 5/6;
+  grid-column: 1/2;
+  justify-self: stretch;
+  background-image: url("images/pexels-brett-jordan-4807505.jpg");
+  opacity: 0.3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translate(130px, -100px) rotate(-40deg);
+  z-index: 5;
+  transition: all 2s 0.1s ease-in-out;
+}
+.extra2:hover {
+  transform: translate(0px, 0px) rotate(0deg);
+  opacity: 0.6;
+}
+
+.extra3 {
+  grid-row: 6/7;
+  grid-column: 1/2;
+  justify-self: stretch;
+  background-image: url("images/pexels-suzy-hazelwood-4345114.jpg");
+  opacity: 0.3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translateX(130px) rotate(10deg);
+  z-index: 5;
+  transition: all 2s 0.1s ease-in-out;
+}
+.extra3:hover {
+  transform: translate(0px, 0px) rotate(0deg);
+  opacity: 0.6;
+}
+
+.extra4 {
+  grid-row: 7/8;
+  grid-column: 1/2;
+  justify-self: stretch;
+  background-image: url("images/pexels-suzy-hazelwood-5227067.jpg");
+  opacity: 0.3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  transform: translateX(300px) rotate(-90deg);
+  z-index: 5;
+  transition: all 2s 0.1s ease-in-out;
+}
+.extra4:hover {
+  transform: translate(0px, 0px) rotate(0deg);
+  opacity: 0.6;
 }
 
 @keyframes animated-gradient {
@@ -200,7 +243,7 @@ footer {
     background-position: 0% 0%;
   }
 }
-.page-wrapper::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -211,19 +254,22 @@ html {
   height: 100vh;
   width: 100vw;
   background: no-repeat url("images/background.jpg") center center;
+  z-index: -100;
 }
 
-body {
+html::before {
+  content: "";
   margin: 0;
   padding: 0;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background: no-repeat url("/images/background.jpg");
-  background: radial-gradient(circle at center, transparent 10%, rgba(0, 0, 0, 0.85) 10%);
+  background: no-repeat radial-gradient(circle at center, transparent 10%, rgba(0, 0, 0, 0.85) 10%);
   background-size: 200% 200%;
   animation: animated-gradient 20s ease-in-out infinite;
-  display: grid;
+  z-index: -10;
+  display: block;
+  position: absolute;
 }
 
 .main {
@@ -235,7 +281,7 @@ body {
   }
 }
 
-.page-wrapper {
+body {
   grid-row: 1/2;
   grid-column: 1/2;
   height: 100vh;
@@ -249,9 +295,12 @@ body {
   gap: 1rem;
 }
 @media (min-width: 500px) {
-  .page-wrapper {
+  body {
     grid-template-columns: 1fr 2fr;
   }
+}
+body .page-wrapper {
+  display: contents;
 }
 
 .intro {

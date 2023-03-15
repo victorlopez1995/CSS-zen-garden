@@ -15,7 +15,7 @@
     100%{background-position: 0% 0%;}
 }
 
-.page-wrapper::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
   }
 
@@ -26,21 +26,22 @@ html{
     height: 100vh;
     width: 100vw;
     background: no-repeat url("images/background.jpg") center center;
+    z-index: -100;
 }
 
-body{
+html::before{
+    content:"";
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background: no-repeat url("/images/background.jpg");
-
-    background: radial-gradient(circle at center, transparent 10%, rgba(0,0,0, 0.85) 10%);
+    background:no-repeat radial-gradient(circle at center, transparent 10%, rgba(0,0,0, 0.85) 10%);
     background-size: 200% 200%;
     animation: animated-gradient 20s ease-in-out infinite;
-
-    display: grid;
+    z-index: -10;
+    display: block;
+    position: absolute;
 }
 .main{
     display: contents;
@@ -48,7 +49,7 @@ body{
         @include atoms.apile(2, span 1);
     }
 }
-.page-wrapper{
+body{
     grid-row: 1/2;
     grid-column: 1/2;
     height: 100vh;
@@ -63,10 +64,12 @@ body{
     @include atoms.breakpoint(large){
         grid-template-columns: 1fr 2fr;  
     }
+    .page-wrapper{
+        display: contents;
+    }
 }
 .intro{
-    display: contents;
-    
+    display: contents;   
 }
 
 
