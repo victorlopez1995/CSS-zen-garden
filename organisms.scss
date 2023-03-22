@@ -78,8 +78,11 @@ body{
 
 footer a {
     color: transparent;
+    padding: 10px;
     &:hover {
         color: transparent;
+        border-color: transparent;
+        
     }
 }
     
@@ -91,11 +94,16 @@ footer a {
 }
 .zen-license {
     @include atoms.logos("images/cc_icon.png");
+    &::after{
+        content:"cc icon"
+    }
 }
 .zen-accessibility {
     @include atoms.logos("images/accessibility_icon.png");
 }
 .zen-github {
     @include atoms.logos("images/github_icon.png");
-
+    &::after{
+        content:"git"
+    }
 }

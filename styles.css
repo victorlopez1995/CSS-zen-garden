@@ -48,7 +48,7 @@ p {
 }
 
 a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   color: #CCCCCC;
   text-decoration: none;
   font-weight: bold;
@@ -309,9 +309,11 @@ body .page-wrapper {
 
 footer a {
   color: transparent;
+  padding: 10px;
 }
 footer a:hover {
   color: transparent;
+  border-color: transparent;
 }
 
 .zen-validate-html {
@@ -343,6 +345,9 @@ footer a:hover {
   background-size: cover;
   margin: 20px;
 }
+.zen-license::after {
+  content: "cc icon";
+}
 
 .zen-accessibility {
   background-image: url("images/accessibility_icon.png");
@@ -362,6 +367,9 @@ footer a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 20px;
+}
+.zen-github::after {
+  content: "git";
 }
 
 /*# sourceMappingURL=styles.css.map */
