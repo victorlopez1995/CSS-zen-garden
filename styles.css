@@ -208,6 +208,16 @@ footer {
   opacity: 0.6;
 }
 
+.extra5 {
+  grid-row: 8/9;
+  grid-column: 1/2;
+  background-image: url("images/magnifying-glass.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  justify-self: stretch;
+}
+
 @keyframes animated-gradient {
   0% {
     background-position: 0% 0%;
@@ -325,9 +335,27 @@ footer a:hover {
   background-size: cover;
   margin: 20px;
 }
+.zen-validate-html:hover {
+  background-image: url("images/html_icon2.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
 
 .zen-validate-css {
   background-image: url("images/css_icon.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+.zen-validate-css:hover {
+  background-image: url("images/css_icon2.png");
   background-color: transparent;
   height: 50px;
   background-position: center;
@@ -348,6 +376,15 @@ footer a:hover {
 .zen-license::after {
   content: "cc icon";
 }
+.zen-license:hover {
+  background-image: url("images/cc_icon2.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
 
 .zen-accessibility {
   background-image: url("images/accessibility_icon.png");
@@ -357,6 +394,18 @@ footer a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 20px;
+}
+.zen-accessibility:hover {
+  background-image: url("images/accessibility_icon2.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+.zen-accessibility::after {
+  content: "ac";
 }
 
 .zen-github {
@@ -370,6 +419,15 @@ footer a:hover {
 }
 .zen-github::after {
   content: "git";
+}
+.zen-github:hover {
+  background-image: url("images/github_icon2.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
