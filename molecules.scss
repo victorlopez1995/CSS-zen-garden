@@ -52,61 +52,74 @@ footer{
   grid-column: 1/2;
   justify-self: center;
   align-self: center;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-image: url("images/fbi-g82a9b62e8_1920.png");
+  background-size: 150px;
   opacity: .1;
-  background-size: 200px;
   background-repeat: no-repeat;
+  margin: 0 auto;
+  @include atoms.breakpoint(large){
+    width: 200px;
+    height: 200px;
+    background-size: 200px;
+  }
 }
 .extra2 {
-  grid-row: 5/6;
-  grid-column: 1/2;
-  justify-self: stretch;
-  background-image: url("images/pexels-brett-jordan-4807505.jpg");
-  opacity: .3;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  transform: translate(130px, -100px) rotate(-40deg);
-  z-index: 5;
-  transition: all 2s 0.1s ease-in-out;
-  &:hover{
-    transform: translate(0px, 0px) rotate(0deg);
-    opacity: .6;
+
+  @include atoms.breakpoint(large){
+    grid-row: 5/6;
+    grid-column: 1/2;
+    justify-self: stretch;
+    background-image: url("images/pexels-brett-jordan-4807505.jpg");
+    opacity: .3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translate(130px, -100px) rotate(-40deg);
+    z-index: 5;
+    transition: all 2s 0.1s ease-in-out;
+    &:hover{
+      transform: translate(0px, 0px) rotate(0deg);
+      opacity: .6;
+    }
   }
 }
 .extra3 {
-  grid-row: 6/7;
-  grid-column: 1/2;
-  justify-self: stretch;
-  background-image: url("images/pexels-suzy-hazelwood-4345114.jpg");
-  opacity: .3;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  transform: translateX(130px) rotate(10deg);
-  z-index: 5;
-  transition: all 2s 0.1s ease-in-out;
-  &:hover{
-    transform: translate(0px, 0px) rotate(0deg);
-    opacity: .6;
+  @include atoms.breakpoint(large){
+    grid-row: 6/7;
+    grid-column: 1/2;
+    justify-self: stretch;
+    background-image: url("images/pexels-suzy-hazelwood-4345114.jpg");
+    opacity: .3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translateX(130px) rotate(10deg);
+    z-index: 5;
+    transition: all 2s 0.1s ease-in-out;
+    &:hover{
+      transform: translate(0px, 0px) rotate(0deg);
+      opacity: .6;
+    }
   }
 }
 .extra4 {
-  grid-row: 7/8;
-  grid-column: 1/2;
-  justify-self: stretch;
-  background-image: url("images/pexels-suzy-hazelwood-5227067.jpg");
-  opacity: .3;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
-  transform: translateX(300px) rotate(-90deg);
-  z-index: 5;
-  transition: all 2s 0.1s ease-in-out;
-  &:hover{
-    transform: translate(0px, 0px) rotate(0deg);
-    opacity: .6;
+  @include atoms.breakpoint(large){
+    grid-row: 7/8;
+    grid-column: 1/2;
+    justify-self: stretch;
+    background-image: url("images/pexels-suzy-hazelwood-5227067.jpg");
+    opacity: .3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transform: translateX(300px) rotate(-90deg);
+    z-index: 5;
+    transition: all 2s 0.1s ease-in-out;
+    &:hover{
+      transform: translate(0px, 0px) rotate(0deg);
+      opacity: .6;
+    }
   }
 }

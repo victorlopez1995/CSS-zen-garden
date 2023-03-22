@@ -20,7 +20,7 @@
 }
 @mixin breakpoint($break) {
   @if $break == large {
-  @media (min-width: $break-small) { @content; }
+  @media (min-width: $break-large) { @content; }
   } @else {
   @media ($break) { @content; }
   }
