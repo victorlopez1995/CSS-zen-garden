@@ -82,24 +82,50 @@ body{
 
 footer a {
     color: transparent;
+    padding: 10px;
     &:hover {
         color: transparent;
+        border-color: transparent;
+
     }
 }
     
 .zen-validate-html {
     @include atoms.logos("images/html_icon.png");
+    &:hover{
+        @include atoms.logos("images/html_icon2.png");
+    }
 }
 .zen-validate-css {
     @include atoms.logos("images/css_icon.png");
+    &:hover{
+        @include atoms.logos("images/css_icon2.png");
+    }
 }
 .zen-license {
     @include atoms.logos("images/cc_icon.png");
+    &::after{
+        content:"cc icon"
+    }
+    &:hover{
+        @include atoms.logos("images/cc_icon2.png");
+    }
 }
 .zen-accessibility {
     @include atoms.logos("images/accessibility_icon.png");
+    &:hover{
+        @include atoms.logos("images/accessibility_icon2.png");
+    }
+    &::after{
+        content:"ac"
+    }
 }
 .zen-github {
     @include atoms.logos("images/github_icon.png");
-
+    &::after{
+        content:"git"
+    }
+    &:hover{
+        @include atoms.logos("images/github_icon2.png");
+    }
 }

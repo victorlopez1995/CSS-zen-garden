@@ -48,7 +48,7 @@ p {
 }
 
 a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   color: #CCCCCC;
   text-decoration: none;
   font-weight: bold;
@@ -222,6 +222,16 @@ footer {
   }
 }
 
+.extra5 {
+  grid-row: 8/9;
+  grid-column: 1/2;
+  background-image: url("images/magnifying-glass.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  justify-self: stretch;
+}
+
 @keyframes animated-gradient {
   0% {
     background-position: 0% 0%;
@@ -328,13 +338,24 @@ body .page-wrapper {
 
 footer a {
   color: transparent;
+  padding: 10px;
 }
 footer a:hover {
   color: transparent;
+  border-color: transparent;
 }
 
 .zen-validate-html {
   background-image: url("images/html_icon.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+.zen-validate-html:hover {
+  background-image: url("images/html_icon2.png");
   background-color: transparent;
   height: 50px;
   background-position: center;
@@ -352,9 +373,30 @@ footer a:hover {
   background-size: cover;
   margin: 20px;
 }
+.zen-validate-css:hover {
+  background-image: url("images/css_icon2.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
 
 .zen-license {
   background-image: url("images/cc_icon.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+.zen-license::after {
+  content: "cc icon";
+}
+.zen-license:hover {
+  background-image: url("images/cc_icon2.png");
   background-color: transparent;
   height: 50px;
   background-position: center;
@@ -372,9 +414,33 @@ footer a:hover {
   background-size: cover;
   margin: 20px;
 }
+.zen-accessibility:hover {
+  background-image: url("images/accessibility_icon2.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+.zen-accessibility::after {
+  content: "ac";
+}
 
 .zen-github {
   background-image: url("images/github_icon.png");
+  background-color: transparent;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px;
+}
+.zen-github::after {
+  content: "git";
+}
+.zen-github:hover {
+  background-image: url("images/github_icon2.png");
   background-color: transparent;
   height: 50px;
   background-position: center;

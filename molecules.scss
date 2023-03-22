@@ -123,3 +123,13 @@ footer{
     }
   }
 }
+.extra5 {
+  grid-row: 8/9;
+  grid-column: 1/2;
+  background-image: url("images/magnifying-glass.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  justify-self: stretch;
+
+}
